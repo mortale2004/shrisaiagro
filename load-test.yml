@@ -1,0 +1,12 @@
+config:
+  target: 'http://localhost:3000' # your Next.js server URL
+  phases:
+    - duration: 60 # How long to run the test (in seconds)
+      arrivalRate: 500 # Requests per second
+      rampTo: 500 # Ramp up to 100 requests per second
+scenarios:
+  - flow:
+      - get:
+          url: '/voting/markVote' # The route you want to test
+      - get:
+          url: '/dashboard' # Another route to test
