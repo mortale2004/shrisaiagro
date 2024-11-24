@@ -130,16 +130,8 @@ const BillingForm = ({ handlePrintClick }: any) => {
               </AppGridItem>
             </Fragment>
           ))}
-          <AppGridItem md={4}>
-            <AppTextField
-              name="advance"
-              type="number"
-              label="Advance"
-              control={control}
-            />
-          </AppGridItem>
 
-          <AppGridItem md={8}>
+          <AppGridItem>
             <Button
               sx={{
                 float: 'right',
@@ -156,6 +148,35 @@ const BillingForm = ({ handlePrintClick }: any) => {
               Add More
             </Button>
           </AppGridItem>
+          <AppGridItem md={4}>
+            <AppTextField
+              name="advance"
+              type="number"
+              label="Advance"
+              control={control}
+            />
+          </AppGridItem>
+
+          <AppGridItem md={4}>
+            <AppTextField
+              name="motor_number"
+              label="Motor Number"
+              control={control}
+            />
+          </AppGridItem>
+
+          <AppGridItem md={4}>
+            <AppTextField name="moisture" label="Moisture" control={control} />
+          </AppGridItem>
+
+          <AppGridItem md={4}>
+            <AppTextField
+              name="po_number"
+              label="PO Number"
+              control={control}
+            />
+          </AppGridItem>
+
           <AppGridItem>
             <AppSubmitButton
               sx={{

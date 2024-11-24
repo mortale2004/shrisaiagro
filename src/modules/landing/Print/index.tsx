@@ -271,8 +271,10 @@ const Print = ({ printTableRef, data }: any) => {
                       fontWeight: 'bold',
                     }}
                   >
-                    Moisture - <br />
-                    P.O. No.
+                    Motor No. - {data?.motor_number} <br />
+                    Moisture - {data?.moisture}
+                    <br />
+                    P.O. No. - {data?.po_number}
                   </Typography>
                 </TableCell>
                 <TableCell></TableCell>
