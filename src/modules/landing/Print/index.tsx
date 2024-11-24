@@ -24,11 +24,9 @@ const Print = ({ printTableRef, data }: any) => {
   }, [data?.particulars]);
   return (
     <Box
-      sx={
-        {
-          // display: 'none',
-        }
-      }
+      sx={{
+        display: 'none',
+      }}
     >
       <Box
         ref={printTableRef}
