@@ -3,7 +3,6 @@ import AppGridItem from '@/components/AppGrid/AppGridItem';
 import AppSubmitButton from '@/components/AppSubmitButton';
 import AppDateField from '@/components/Form/AppDateField';
 import AppFormHeader from '@/components/Form/AppFormHeader';
-import AppRadioField from '@/components/Form/AppRadioField';
 import AppTextField from '@/components/Form/AppTextField';
 import { Button, IconButton } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -27,8 +26,6 @@ const BillingForm = ({ handlePrintClick }: any) => {
       address: '',
       primary_contact: '',
       invoice_number: '',
-      gst_number: '',
-      is_gst_applicable: false,
     },
   });
 
@@ -142,24 +139,7 @@ const BillingForm = ({ handlePrintClick }: any) => {
             />
           </AppGridItem>
 
-          <AppGridItem md={6} className="space-between">
-            <AppRadioField
-              sx={{
-                maxWidth: '400px',
-              }}
-              name="is_gst_applicable"
-              label="GST Applicable"
-              control={control}
-            />
-            {String(watch('is_gst_applicable')) === 'true' && (
-              <AppTextField
-                name="gst_number"
-                label="GST Number"
-                control={control}
-              />
-            )}
-          </AppGridItem>
-          <AppGridItem md={2}>
+          <AppGridItem md={8}>
             <Button
               sx={{
                 float: 'right',

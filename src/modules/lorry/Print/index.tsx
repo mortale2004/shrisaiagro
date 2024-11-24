@@ -290,16 +290,14 @@ const Print = ({ printTableRef, data }: any) => {
             }}
           >
             <Box>
-              {String(data?.is_gst_applicable) === 'true' && (
-                <Typography
-                  sx={{
-                    fontWeight: 'bold',
-                    color: 'maroon',
-                  }}
-                >
-                  GST No.: {data?.gst_number}
-                </Typography>
-              )}
+              <Typography
+                sx={{
+                  fontWeight: 'bold',
+                  color: 'maroon',
+                }}
+              >
+                GST No.: 27ABCCS4871P1ZM
+              </Typography>
               <Typography
                 sx={{
                   color: blue[600],

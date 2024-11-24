@@ -3,7 +3,6 @@ import AppGridItem from '@/components/AppGrid/AppGridItem';
 import AppSubmitButton from '@/components/AppSubmitButton';
 import AppDateField from '@/components/Form/AppDateField';
 import AppFormHeader from '@/components/Form/AppFormHeader';
-import AppRadioField from '@/components/Form/AppRadioField';
 import AppTextField from '@/components/Form/AppTextField';
 import Box from '@mui/material/Box';
 import { useForm } from 'react-hook-form';
@@ -184,24 +183,6 @@ const BillingForm = ({ handlePrintClick }: any) => {
               label="ड्रायव्हर मो नं"
               control={control}
             />
-          </AppGridItem>
-
-          <AppGridItem md={8} className="space-between">
-            <AppRadioField
-              sx={{
-                maxWidth: '400px',
-              }}
-              name="is_gst_applicable"
-              label="GST Applicable"
-              control={control}
-            />
-            {String(watch('is_gst_applicable')) === 'true' && (
-              <AppTextField
-                name="gst_number"
-                label="GST Number"
-                control={control}
-              />
-            )}
           </AppGridItem>
 
           <AppGridItem>
